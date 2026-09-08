@@ -1,10 +1,17 @@
 # Full-Stack MERN E-Commerce Web Application
 
+> 🌐 **Live Website Link:** [https://mern-ecommerce-c86z.onrender.com](https://mern-ecommerce-c86z.onrender.com/)
+> 
+> 🔑 **Demo Login Credentials:**  
+> • **Admin Panel:** `admin@ecommerce.com` / `admin123`  
+> • **Customer Account:** `demo@gmail.com` / `helloWorld@123`
+
 A modern, responsive e-commerce web application built using the MERN stack (MongoDB, Express.js, React, Node.js), Redux Toolkit for centralized state management, and Material-UI (MUI) for a clean, intuitive user interface.
 
 This application provides dedicated interfaces and capabilities for both **Customers (Users)** and **Administrators (Admin)**.
 
 ---
+
 
 ## Key Features
 
