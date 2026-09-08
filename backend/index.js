@@ -43,10 +43,22 @@ server.use("/wishlist",wishlistRoutes)
 
 
 
-server.get("/",(req,res)=>{
-    res.status(200).json({message:'running'})
+const path = require('path')
+
+// Serve frontend static build
+server.use(express.static(path.resolve(__dirname, '..', 'frontend', 'build')))
+
+// Catch-all route for Single Page Application
+server.get('*', (req, res) => {
+    const indexPath = path.resolve(__dirname, '..', 'frontend', 'build', 'index.html')
+    res.sendFile(indexPath, (err) => {
+        if (err) {
+            res.status(200).json({ message: 'Backend API running' })
+        }
+    })
 })
 
-server.listen(8000,()=>{
-    console.log('server [STARTED] ~ http://localhost:8000');
+const PORT = process.env.PORT || 8000
+server.listen(PORT, () => {
+    console.log(`server [STARTED] ~ http://localhost:${PORT}`)
 })
